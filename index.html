@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTI - Advanced Science and Technology Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SYSTEM STATUS BAR - TOP -->
+    <div class="system-bar">
+        <div class="container">
+            <div class="system-time" id="philippine-time">Philippine Standard Time: <span>Loading...</span></div>
+            <div class="system-badges">
+                <span class="badge">REPUBLIC OF THE PHILIPPINES</span>
+                <span class="badge">DOST</span>
+                <span class="badge">ASTI</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVIGATION -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-area">
+                <img src="./assets/astilogo.png" alt="ASTI Logo" class="logo" onerror="this.src='https://via.placeholder.com/50x50/0a0a0a/00a8ff?text=ASTI'">
+                <img src="assets/dost-logo.png" alt="DOST Logo" class="logo" onerror="this.src='https://via.placeholder.com/50x50/0a0a0a/00a8ff?text=DOST'">
+            </div>
+            
+            <!-- MENU inspired by Arknights -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active" data-section="home">HOME</a></li>
+                    <li><a href="#transparency" class="nav-link" data-section="transparency">TRANSPARENCY</a></li>
+                    <li><a href="#research" class="nav-link" data-section="research">RESEARCH</a></li>
+                    <li><a href="#innovation" class="nav-link" data-section="innovation">INNOVATION</a></li>
+                    <li><a href="#resources" class="nav-link" data-section="resources">RESOURCES</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <div class="menu-indicator">001 // 006</div>
+        </div>
+    </header>
+
+    <!-- SCROLL PROMPT (Arknights style) -->
+    <div class="scroll-prompt">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+    </div>
+
+    <!-- MAIN CONTENT AREA - DYNAMIC SECTIONS -->
+    <main class="main-content">
+        
+        <!-- YOU ARE HERE INDICATOR -->
+        <div class="container">
+            <div class="location-indicator">
+                <span class="location-label">YOU ARE HERE:</span>
+                <span class="location-current" id="current-location">Home</span>
+            </div>
+        </div>
+
+        <!-- HOME SECTION -->
+        <section id="home" class="content-section active">
+            <div class="container">
+                <!-- Hero with grid background -->
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <!-- Logo and title side by side -->
+                        <div class="title-with-logo">
+                            <img src="./assets/asti-logo.png" alt="ASTI Logo" class="hero-logo" onerror="this.src='https://via.placeholder.com/80x80/0a0a0a/00a8ff?text=ASTI'">
+                            <h1 class="main-title">ADVANCED SCIENCE AND<br>TECHNOLOGY INSTITUTE</h1>
+                        </div>
+                        
+                        <!-- Badges row - 5 images next to each other -->
+                        <div class="badges-row">
+                            <img src="./assets/asti-badge1.jpg" alt="ASTI Badge 1" class="badge-image" onerror="this.src='https://via.placeholder.com/100x50/0a0a0a/00a8ff?text=BADGE+1'">
+                            <img src="./assets/asti-badge2.jpg" alt="ASTI Badge 2" class="badge-image" onerror="this.src='https://via.placeholder.com/100x50/0a0a0a/00a8ff?text=BADGE+2'">
+                            <img src="./assets/asti-badge3.jpg" alt="ASTI Badge 3" class="badge-image" onerror="this.src='https://via.placeholder.com/100x50/0a0a0a/00a8ff?text=BADGE+3'">
+                            <img src="./assets/asti-badge4.jpg" alt="ASTI Badge 4" class="badge-image" onerror="this.src='https://via.placeholder.com/100x50/0a0a0a/00a8ff?text=BADGE+4'">
+                            <img src="./assets/asti-badge5.jpg" alt="ASTI Badge 5" class="badge-image" onerror="this.src='https://via.placeholder.com/100x50/0a0a0a/00a8ff?text=BADGE+5'">
+                        </div>
+                        
+                        <p class="hero-sub">Department of Science and Technology</p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number" id="projects-count">0</span>
+                                <span class="stat-label">ACTIVE PROJECTS</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="researchers-count">0</span>
+                                <span class="stat-label">RESEARCHERS</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="facilities-count">0</span>
+                                <span class="stat-label">FACILITIES</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="grid-overlay"></div>
+                        <div class="pulsing-core"></div>
+                    </div>
+                </div>
+
+                <!-- LATEST NEWS CAROUSEL -->
+                <div class="section-header">
+                    <h2 class="section-title">LATEST <span class="accent">NEWS</span></h2>
+                    <div class="section-controls">
+                        <span class="control-prev">⟨</span>
+                        <span class="control-next">⟩</span>
+                    </div>
+                </div>
+                
+                <div class="news-carousel">
+                    <div class="news-card">
+                        <div class="news-date">2025.03.07</div>
+                        <h3>ASTI Launches New Space Technology Hub</h3>
+                        <p>Advanced facilities for satellite development inaugurated in Quezon City</p>
+                        <a href="#" class="read-more">READ MORE +</a>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">2025.03.05</div>
+                        <h3>AI Research Program Receives International Recognition</h3>
+                        <p>ASTI's machine learning innovations cited at global tech summit</p>
+                        <a href="#" class="read-more">READ MORE +</a>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">2025.03.01</div>
+                        <h3>PEDRO Center Expands Data Coverage</h3>
+                        <p>New ground stations enhance earth observation capabilities</p>
+                        <a href="#" class="read-more">READ MORE +</a>
+                    </div>
+                </div>
+
+                <!-- WHO WE ARE / WHAT WE DO -->
+                <div class="grid-2col">
+                    <div class="info-panel" id="who-we-are">
+                        <h2 class="panel-title">// WHO WE ARE</h2>
+                        <p>The Advanced Science and Technology Institute (ASTI) is the research and development arm of the Department of Science and Technology (DOST) specializing in electronics, information and communications technology, and space technology.</p>
+                        <div class="panel-stats">
+                            <span>EST. 1987</span>
+                            <span>•</span>
+                            <span>Quezon City</span>
+                            <span>•</span>
+                            <span>Nationwide Coverage</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-panel" id="what-we-do">
+                        <h2 class="panel-title">// WHAT WE DO</h2>
+                        <ul class="capabilities-list">
+                            <li>Space Technology & Satellite Development</li>
+                            <li>Wireless Communications Research</li>
+                            <li>Artificial Intelligence & Machine Learning</li>
+                            <li>Smart City Solutions</li>
+                            <li>Robotics & Automation</li>
+                            <li>High-Performance Computing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSPARENCY SECTION -->
+        <section id="transparency" class="content-section">
+            <div class="container">
+                <h2 class="section-title large">TRANSPARENCY <span class="accent">PORTAL</span></h2>
+                <p class="section-desc">Institutional data and public information access</p>
+                
+                <!-- DATA VAULTS - 3 main categories -->
+                <div class="data-vaults">
+                    <!-- About Us Vault -->
+                    <div class="vault-card" data-vault="about">
+                        <div class="vault-icon">📋</div>
+                        <h3>ABOUT US</h3>
+                        <p>Mandate, mission, officials, and policies</p>
+                        <div class="vault-items" style="display: none;">
+                            <ul>
+                                <li><a href="#" class="data-link">Our Mandate</a></li>
+                                <li><a href="#" class="data-link">Mission, Vision, Strategic Goals</a></li>
+                                <li><a href="#" class="data-link">Key Officials</a></li>
+                                <li><a href="#" class="data-link">ASTI Website Privacy Policy</a></li>
+                                <li><a href="#" class="data-link">ASTI Privacy Notice</a></li>
+                                <li><a href="#" class="data-link">CART Directory</a></li>
+                            </ul>
+                        </div>
+                        <button class="vault-toggle">ACCESS VAULT +</button>
+                    </div>
+                    
+                    <!-- Procurement Vault -->
+                    <div class="vault-card" data-vault="procurement">
+                        <div class="vault-icon">📊</div>
+                        <h3>PROCUREMENT</h3>
+                        <p>Bids, awards, and annual plans</p>
+                        <div class="vault-items" style="display: none;">
+                            <ul>
+                                <li><a href="#" class="data-link">Annual Procurement Plan</a></li>
+                                <li><a href="#" class="data-link">Bids and Awards</a></li>
+                                <li><a href="#" class="data-link">Procurement Reports</a></li>
+                                <li><a href="#" class="data-link">Citizen's Charter</a></li>
+                                <li><a href="#" class="data-link">Gender and Development (GAD) Corner</a></li>
+                                <li><a href="#" class="data-link">Annual Report</a></li>
+                            </ul>
+                        </div>
+                        <button class="vault-toggle">ACCESS VAULT +</button>
+                    </div>
+                    
+                    <!-- Disposal & Careers Vault -->
+                    <div class="vault-card" data-vault="disposal">
+                        <div class="vault-icon">⚙️</div>
+                        <h3>DISPOSAL & CAREERS</h3>
+                        <p>Asset disposal and opportunities</p>
+                        <div class="vault-items" style="display: none;">
+                            <ul>
+                                <li><a href="#" class="data-link">Invitation to Bid – Disposal</a></li>
+                                <li><a href="#" class="data-link">Careers</a></li>
+                            </ul>
+                        </div>
+                        <button class="vault-toggle">ACCESS VAULT +</button>
+                    </div>
+                </div>
+                
+                <!-- Key Officials Modal (hidden by default) -->
+                <div id="officials-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <h3>KEY OFFICIALS</h3>
+                        <div class="officials-grid">
+                            <div class="official-card">
+                                <div class="official-photo placeholder"></div>
+                                <h4>Dr. Franz A. de Leon</h4>
+                                <p>Director</p>
+                            </div>
+                            <div class="official-card">
+                                <div class="official-photo placeholder"></div>
+                                <h4>Dr. Maria Theresa G. de Leon</h4>
+                                <p>Deputy Director</p>
+                            </div>
+                            <!-- Add more as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESEARCH SECTION (Tech Tree) -->
+        <section id="research" class="content-section">
+            <div class="container">
+                <h2 class="section-title large">RESEARCH <span class="accent">HUB</span></h2>
+                <p class="section-desc">Explore our technology domains and facilities</p>
+                
+                <!-- TECH TREE VISUALIZATION -->
+                <div class="tech-tree" id="tech-tree">
+                    <svg class="tree-connections" width="100%" height="100%"></svg>
+                    
+                    <div class="tree-node" data-area="space" style="top: 20%; left: 10%;">
+                        <div class="node-icon">🛰️</div>
+                        <span class="node-label">SPACE TECH</span>
+                    </div>
+                    
+                    <div class="tree-node" data-area="wireless" style="top: 40%; left: 25%;">
+                        <div class="node-icon">📡</div>
+                        <span class="node-label">WIRELESS</span>
+                    </div>
+                    
+                    <div class="tree-node" data-area="ai" style="top: 60%; left: 40%;">
+                        <div class="node-icon">🧠</div>
+                        <span class="node-label">AI</span>
+                    </div>
+                    
+                    <div class="tree-node" data-area="smart-cities" style="top: 30%; left: 55%;">
+                        <div class="node-icon">🏙️</div>
+                        <span class="node-label">SMART CITIES</span>
+                    </div>
+                    
+                    <div class="tree-node" data-area="emerging" style="top: 50%; left: 70%;">
+                        <div class="node-icon">⚡</div>
+                        <span class="node-label">EMERGING TECH</span>
+                    </div>
+                    
+                    <div class="tree-node" data-area="robotics" style="top: 70%; left: 85%;">
+                        <div class="node-icon">🤖</div>
+                        <span class="node-label">ROBOTICS</span>
+                    </div>
+                    
+                    <div class="tree-node" data-area="pedro" style="top: 80%; left: 15%;">
+                        <div class="node-icon">🌍</div>
+                        <span class="node-label">PEDRO CENTER</span>
+                    </div>
+                    
+                    <div class="tree-node" data-area="philsensors" style="top: 85%; left: 45%;">
+                        <div class="node-icon">📊</div>
+                        <span class="node-label">PHILSENSORS</span>
+                    </div>
+                </div>
+                
+                <!-- Research Content Display Area -->
+                <div class="research-content" id="research-content">
+                    <div class="research-placeholder">
+                        <p>// SELECT A RESEARCH NODE TO EXPLORE</p>
+                        <div class="pulse-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INNOVATION SECTION -->
+        <section id="innovation" class="content-section">
+            <div class="container">
+                <h2 class="section-title large">INNOVATION <span class="accent">SYSTEMS</span></h2>
+                
+                <div class="innovation-grid">
+                    <!-- COARE -->
+                    <div class="innovation-card">
+                        <div class="card-header">
+                            <h3>COARE</h3>
+                            <span class="badge">ACTIVE</span>
+                        </div>
+                        <p class="card-sub">Computing and Archiving Research Environment</p>
+                        <div class="card-visual server-rack">
+                            <div class="server-led"></div>
+                            <div class="server-led"></div>
+                            <div class="server-led"></div>
+                        </div>
+                        <p class="card-desc">High-performance computing facility for researchers</p>
+                        <a href="#" class="card-link">ACCESS SYSTEM →</a>
+                    </div>
+                    
+                    <!-- PREGINET -->
+                    <div class="innovation-card">
+                        <div class="card-header">
+                            <h3>PREGINET</h3>
+                            <span class="badge">ACTIVE</span>
+                        </div>
+                        <p class="card-sub">Philippine Research, Education and Government Information Network</p>
+                        <div class="card-visual network-map">
+                            <div class="network-node"></div>
+                            <div class="network-node"></div>
+                            <div class="network-node"></div>
+                        </div>
+                        <p class="card-desc">High-speed broadband network for R&D and education</p>
+                        <a href="#" class="card-link">VIEW NETWORK →</a>
+                    </div>
+                    
+                    <!-- EPDC -->
+                    <div class="innovation-card">
+                        <div class="card-header">
+                            <h3>EPDC</h3>
+                            <span class="badge">ACTIVE</span>
+                        </div>
+                        <p class="card-sub">Electronics Product Development Center</p>
+                        <div class="card-visual circuit-board">
+                            <div class="trace"></div>
+                            <div class="trace"></div>
+                            <div class="trace"></div>
+                        </div>
+                        <p class="card-desc">Prototyping and development for electronics innovation</p>
+                        <a href="#" class="card-link">EXPLORE FACILITY →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESOURCES SECTION -->
+        <section id="resources" class="content-section">
+            <div class="container">
+                <h2 class="section-title large">RESOURCES <span class="accent">& MEDIA</span></h2>
+                
+                <div class="resources-layout">
+                    <!-- Left column - Events and Media Release -->
+                    <div class="resources-left">
+                        <div class="resource-block">
+                            <h3 class="block-title">// EVENTS</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-date">MAR 15, 2025</div>
+                                    <div class="timeline-content">International Symposium on AI Research</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">MAR 22, 2025</div>
+                                    <div class="timeline-content">Space Technology Workshop</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">APR 05, 2025</div>
+                                    <div class="timeline-content">ASTI Annual Research Review</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-block">
+                            <h3 class="block-title">// MEDIA RELEASE</h3>
+                            <div class="media-list">
+                                <a href="#" class="media-item">ASTI launches new satellite ground station</a>
+                                <a href="#" class="media-item">DOST-ASTI partners with international research network</a>
+                                <a href="#" class="media-item">AI for disaster preparedness program announced</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right column - Ang Surian and News -->
+                    <div class="resources-right">
+                        <div class="feature-block" id="ang-surian">
+                            <h3 class="block-title">// ANG SURIAN</h3>
+                            <div class="feature-placeholder">
+                                <div class="play-button">▶</div>
+                                <p>Featured Documentary: The Science Behind ASTI</p>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-block">
+                            <h3 class="block-title">// NEWS ARTICLES</h3>
+                            <div class="news-feed">
+                                <article class="news-item">
+                                    <h4><a href="#">ASTI researcher wins international award</a></h4>
+                                    <span class="news-meta">March 7, 2025</span>
+                                </article>
+                                <article class="news-item">
+                                    <h4><a href="#">New wireless technology tested in rural areas</a></h4>
+                                    <span class="news-meta">March 4, 2025</span>
+                                </article>
+                                <article class="news-item">
+                                    <h4><a href="#">PEDRO Center releases annual data report</a></h4>
+                                    <span class="news-meta">March 1, 2025</span>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2 class="section-title large">CONTACT <span class="accent">US</span></h2>
+                
+                <div class="contact-grid">
+                    <!-- Left side - Contact Info with Map -->
+                    <div class="contact-info">
+                        <div class="info-block">
+                            <h3>// ADDRESS</h3>
+                            <p>DOST-ASTI Bldg., UP Technology Park Complex,<br>
+                            C.P. Garcia Avenue, Diliman, Quezon City<br>
+                            Philippines 1101</p>
+                        </div>
+                        
+                        <!-- Google Map Embed -->
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.097573684563!2d121.05987431534206!3d14.65403468976395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b76f8f3b8f8f%3A0x8f8f8f8f8f8f8f8f!2sDOST%20Advanced%20Science%20and%20Technology%20Institute!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        
+                        <div class="info-block">
+                            <h3>// CONTACT NUMBER</h3>
+                            <p>‭+63 2 8249 8500<br>
+                            +63 2 8426 9755</p>
+                        </div>
+                        
+                        <div class="info-block">
+                            <h3>// EMAIL</h3>
+                            <p>info@asti.dost.gov.ph</p>
+                        </div>
+                        
+                        <!-- DOST Links -->
+                        <div class="info-block dost-links">
+                            <h3>// OTHER DOST AGENCIES</h3>
+                            <p>For other areas of concern, you can check this list of DOST Attached Agencies and Regional Offices.</p>
+                            <ul class="link-list">
+                                <li><a href="https://www.dost.gov.ph/agency-links/sectoral-planning-councils.html" target="_blank" class="external-link">DOST Attached Agencies →</a></li>
+                                <li><a href="https://www.dost.gov.ph/agency-links/regional-offices.html" target="_blank" class="external-link">DOST Regional Offices →</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Right side - Contact Form -->
+                    <div class="contact-form-container">
+                        <div class="contact-form">
+                            <h3>// ASTI CONTACT FORM</h3>
+                            <p class="form-intro">Please use the form below in order to get in touch with our team.</p>
+                            
+                            <form id="contact-form">
+                                <div class="form-row">
+                                    <input type="text" placeholder="First Name *" class="form-input" required>
+                                    <input type="text" placeholder="Last Name *" class="form-input" required>
+                                </div>
+                                
+                                <input type="email" placeholder="Email *" class="form-input" required>
+                                <input type="text" placeholder="Subject *" class="form-input" required>
+                                <textarea placeholder="Message *" rows="6" class="form-input" required></textarea>
+                                
+                                <button type="submit" class="form-button">SEND MESSAGE →</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER with certified badges -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-badges">
+                <span class="certified-badge">ISO 9001:2015 CERTIFIED</span>
+                <span class="certified-badge">DATA PROTECTION COMPLIANT</span>
+                <span class="certified-badge">GOV PH ACCREDITED</span>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">TERMS OF SERVICE</a>
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS AND CONDITIONS OF USE</a>
+                <a href="#">DATA REQUEST</a>
+            </div>
+            
+            <div class="footer-copyright">
+                © 2025 Advanced Science and Technology Institute. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOADING INDICATOR (Arknights style) -->
+    <div class="loading-indicator">
+        - LOADING 0% -
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
