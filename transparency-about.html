@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ASTI Transparency</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-section { padding: 40px 0; }
+        .content-block { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 30px; border-radius: 8px; margin-bottom: 25px; }
+        .content-block h3 { color: var(--asti-yellow); margin-bottom: 15px; font-size: 1.1rem; }
+        .content-block h4 { color: var(--asti-light-blue); margin: 20px 0 10px; font-size: 1rem; }
+        .content-block p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 15px; }
+        .content-block ul { list-style: none; margin: 10px 0; }
+        .content-block ul li { padding: 8px 0; border-bottom: 1px solid var(--border-subtle); color: var(--text-secondary); padding-left: 20px; position: relative; }
+        .content-block ul li::before { content: '•'; position: absolute; left: 0; color: var(--asti-yellow); }
+        .officials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .official-card { background: var(--bg-secondary); border: 1px solid var(--border-subtle); padding: 20px; border-radius: 8px; text-align: center; transition: all 0.3s; }
+        .official-card:hover { border-color: var(--asti-light-blue); }
+        .official-avatar { width: 80px; height: 80px; background: linear-gradient(135deg, var(--asti-dark-blue), var(--asti-primary-blue)); border-radius: 50%; margin: 0 auto 15px; border: 3px solid var(--asti-light-blue); }
+        .official-card h4 { color: var(--text-primary); margin-bottom: 5px; font-size: 0.95rem; }
+        .official-card p { color: var(--asti-light-blue); font-size: 0.8rem; margin-bottom: 5px; }
+        .official-card .position { color: var(--text-muted); font-size: 0.75rem; }
+        .official-card .contact { font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; }
+        .official-card .contact i { margin-right: 5px; color: var(--asti-yellow); }
+        .mission-vision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .mission-box, .vision-box { background: var(--bg-secondary); border: 1px solid var(--border-subtle); padding: 25px; border-radius: 8px; }
+        .mission-box h4, .vision-box h4 { color: var(--asti-yellow); margin-bottom: 15px; }
+        .mission-box p, .vision-box p { color: var(--text-secondary); font-size: 0.95rem; }
+        .goals-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 15px; }
+        .goal-item { background: var(--bg-secondary); border: 1px solid var(--border-subtle); padding: 15px; border-radius: 6px; text-align: center; }
+        .goal-item span { color: var(--asti-light-blue); font-size: 0.8rem; font-weight: 600; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--asti-light-blue); text-decoration: none; margin-bottom: 20px; transition: color 0.3s; }
+        .back-link:hover { color: var(--asti-yellow); }
+        .table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        table th, table td { padding: 12px 10px; text-align: left; border: 1px solid var(--border-subtle); font-size: 0.85rem; }
+        table th { background: var(--asti-dark-blue); color: var(--text-primary); font-weight: 600; }
+        table td { color: var(--text-secondary); }
+        table tr:hover td { background: var(--bg-secondary); }
+        @media (max-width: 992px) { .officials-grid { grid-template-columns: repeat(2, 1fr); } .mission-vision-grid { grid-template-columns: 1fr; } .goals-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .officials-grid { grid-template-columns: 1fr; } .goals-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="system-bar">
+        <div class="container">
+            <div class="system-time" id="philippine-time">
+                <span class="pst-label">PHILIPPINE STANDARD TIME</span>
+                <span class="time-value">Loading...</span>
+            </div>
+            <div class="system-badges">
+                <span class="badge">REPUBLIC OF THE PHILIPPINES</span>
+                <span class="badge">GOVPH</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="header-logo" onerror="this.src='https://via.placeholder.com/80x80/2260a6/ffffff?text=ASTI'">
+                    <div class="title-block">
+                        <span class="republic-text">Republic of the Philippines</span>
+                        <h1 class="dost-title">Department of Science and Technology</h1>
+                        <h2 class="asti-title">Advanced Science and Technology Institute</h2>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <span class="govph-indicator">GOVPH</span>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="transparency.html" class="nav-link active">Transparency</a></li>
+                        <li><a href="research.html" class="nav-link">Research</a></li>
+                        <li><a href="tech-transfer.html" class="nav-link">Tech Transfer</a></li>
+                        <li><a href="innovation.html" class="nav-link">Innovation</a></li>
+                        <li><a href="resources.html" class="nav-link">Resources</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="location-bar">
+        <div class="container">
+            <div class="location-indicator">
+                <span class="location-label">You are here:</span>
+                <span class="location-current">Transparency > About Us</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <a href="transparency.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Transparency</a>
+            
+            <section class="page-section">
+                <h2 class="section-title"><span class="accent">ABOUT</span> US</h2>
+                
+                <!-- OUR MANDATE -->
+                <div class="content-block">
+                    <h3>// OUR MANDATE</h3>
+                    <p>Over the years, the emergence of information and communications technology has greatly affected the lives of people in the world crossing borders among countries and bringing access closer to one another. In the same token, the birth of Microelectronics has resulted to progress in the development of smaller, lighter and more efficient electronic devices.</p>
+                    <p>This development has a resemblance to the birth of one of the research and development institutes of the Department of Science and Technology (DOST) – the Advanced Science and Technology Institute (ASTI). It was in 1987 when President Corazon C. Aquino renamed the then National Science and Technology Authority (NSTA) to Department of Science and Technology (DOST). As an offshoot of such sequential events, the DOST-ASTI was created as a research and development institute of the Department by virtue of Executive Order No. 128.</p>
+                    <p>Since its establishment on 30 January 1987, DOST-ASTI has gained prominence because of its contributions in ICT, Microelectronics and R&D as the country bids for national development and global competitiveness. With the identification of ICT as a tool to help carve the country's niche in the global scene, DOST-ASTI as one of the government's focal agency for R&D in ICT and Microelectronics, has been mandated to undertake long-term researches to strengthen and modernize the Philippine's science and technology infrastructure; conduct R&D work in the advanced fields of studies; and complement the overall endeavor in the scientific field with intensive activities in the computer and information technologies.</p>
+                    <p>Since the 1990s, the DOST – ASTI has undertaken numerous projects in network technologies and high-performance computing, including pioneering efforts in open source software, IPv6, VoIP and establishing exchanges that were ahead of the industry. ASTI-developed products ranging from electronic data acquisition, biomedical and environmental monitoring systems are deployed across the country – supporting nationwide initiatives in public health, e-governance, education and disaster risk management notably through its crucial role in developing the underlying nationwide infrastructure of over 1,500 sensors and weather stations for Project NOAH.</p>
+                    <p>DOST-ASTI continues to pursue and implement changes on its organizational operations to bring about a more efficient and service-oriented organization. A new organizational structure was implemented to provide more focus on its programs, and at the same time, accord significant contributions to the community. Efforts continue to streamline and review organizational performance, and provide a more customer-centered and proactive organization.</p>
+                    
+                    <h4>The DOST-Advanced Science and Technology Institute is mandated to perform the following functions:</h4>
+                    <ul>
+                        <li>Scientific research and development in the advanced fields of Information and Communication Technology and Microelectronics.</li>
+                        <li>Undertake long-term researches to strengthen and modernize science and technology infrastructure;</li>
+                        <li>Conduct research and development work in the advanced fields of ICT and microelectronics; and</li>
+                        <li>Complement the overall endeavor in the scientific field with intensive activities in the computer and information technologies.</li>
+                    </ul>
+                </div>
+
+                <!-- WHAT WE DO -->
+                <div class="content-block">
+                    <h3>// WHAT WE DO</h3>
+                    <p>DOST – ASTI focuses its resources in the following programs:</p>
+                    
+                    <h4>Information and Communications Technology R&D</h4>
+                    <p>Aim to adopt, adapt, and/or develop strategic and R&D activities in the areas of:</p>
+                    <ul>
+                        <li>Wireless Technologies</li>
+                        <li>Advanced Networks</li>
+                        <li>Internet Applications</li>
+                        <li>Software Development</li>
+                        <li>Artificial Intelligence / Machine Learning</li>
+                        <li>High Performance Computing</li>
+                    </ul>
+                    
+                    <h4>Microelectronics R&D</h4>
+                    <p>Seeks to develop a state-of-the-art microelectronics design facility for:</p>
+                    <ul>
+                        <li>Digital, analog and mixed-signal microelectronics</li>
+                        <li>Embedded System</li>
+                        <li>3D Prototyping</li>
+                    </ul>
+                    
+                    <h4>Technology Transfer</h4>
+                    <p>Pursues dynamic assimilation of research results by industry, academe, NGO's and government instrumentalities. It aims to transfer R&D outputs and advanced know-how through:</p>
+                    <ul>
+                        <li>Conduct of trainings and seminars</li>
+                        <li>Technology diffusion / commercialization</li>
+                        <li>Collaborative R&D</li>
+                        <li>Industry Studies</li>
+                    </ul>
+                    
+                    <h4>Space Technology</h4>
+                    <p>To provide satellite images and supports government agencies with initiatives and programs that can be complemented by high level earth surface information, including but not limited to environmental and agricultural monitoring, disaster risk reduction and management, urban mapping, and national security.</p>
+                </div>
+
+                <!-- HOW WE DO IT -->
+                <div class="content-block">
+                    <h3>// HOW WE DO IT</h3>
+                    <p>DOST – ASTI provides an array of services to its partners. These services are made to fulfill DOST – ASTI's role in the R&D arena by allowing its partners to access local and foreign content, enabling real-time interaction, and facilitating formation of user communities:</p>
+                    <ul>
+                        <li>Networking, Wireless, IPv6</li>
+                        <li>Domain Name System (DNS) Administration</li>
+                        <li>Electronics and Products Development (EPDC)</li>
+                        <li>Contract Research and Consultancy</li>
+                        <li>High-Performance Computing facility</li>
+                        <li>Philippine Earth Data Resource and Observation Center</li>
+                    </ul>
+                </div>
+
+                <!-- MISSION VISION STRATEGIC GOALS -->
+                <div class="content-block">
+                    <h3>// MISSION, VISION, STRATEGIC GOALS</h3>
+                    <div class="mission-vision-grid">
+                        <div class="mission-box">
+                            <h4>Our Mission</h4>
+                            <p>To drive research and innovation by developing relevant technology-driven solutions with far-reaching benefits to society.</p>
+                        </div>
+                        <div class="vision-box">
+                            <h4>Our Vision</h4>
+                            <p>To be a world-class leader in emerging technologies research and innovation.</p>
+                        </div>
+                    </div>
+                    <h4 style="margin-top: 25px;">Our Strategic Goals</h4>
+                    <div class="goals-grid">
+                        <div class="goal-item">
+                            <span>Advanced S&T knowledge for greater benefit to society increased.</span>
+                        </div>
+                        <div class="goal-item">
+                            <span>Sound fiscal management achieved.</span>
+                        </div>
+                        <div class="goal-item">
+                            <span>Top-notch organization derived from improved HR processes established.</span>
+                        </div>
+                        <div class="goal-item">
+                            <span>Internal Processes for better services optimized.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KEY OFFICIALS -->
+                <div class="content-block">
+                    <h3>// KEY OFFICIALS</h3>
+                    <div class="officials-grid">
+                        <div class="official-card">
+                            <div class="official-avatar"></div>
+                            <h4>Franz A. de Leon, Ph.D.</h4>
+                            <p>Director</p>
+                            <span class="position">Office of the Director</span>
+                            <div class="contact">
+                                <i class="fas fa-envelope"></i> franz.deleon@asti.dost.gov.ph<br>
+                                <i class="fas fa-phone"></i> +63 2 8426 9755
+                            </div>
+                        </div>
+                        <div class="official-card">
+                            <div class="official-avatar"></div>
+                            <h4>May C. Cayaban</h4>
+                            <p>Chief Administrative Officer</p>
+                            <span class="position">Finance and Administrative Division</span>
+                            <div class="contact">
+                                <i class="fas fa-envelope"></i> may@asti.dost.gov.ph<br>
+                                <i class="fas fa-phone"></i> +63 2 8426 7423
+                            </div>
+                        </div>
+                        <div class="official-card">
+                            <div class="official-avatar"></div>
+                            <h4>Peter Antonio B. Banzon</h4>
+                            <p>Chief Science Research Specialist</p>
+                            <span class="position">Research and Development Division</span>
+                            <div class="contact">
+                                <i class="fas fa-envelope"></i> peterb@asti.dost.gov.ph<br>
+                                <i class="fas fa-phone"></i> +63 2 8249 8500 loc. 1304
+                            </div>
+                        </div>
+                        <div class="official-card">
+                            <div class="official-avatar"></div>
+                            <h4>Alvin E. Retamar</h4>
+                            <p>Chief Science Research Specialist</p>
+                            <span class="position">Solutions and Services Engineering Division</span>
+                            <div class="contact">
+                                <i class="fas fa-envelope"></i> ning@asti.dost.gov.ph<br>
+                                <i class="fas fa-phone"></i> +63 2 8249 8500 loc. 1408
+                            </div>
+                        </div>
+                        <div class="official-card">
+                            <div class="official-avatar"></div>
+                            <h4>Paul John M. Serrano</h4>
+                            <p>Chief Science Research Specialist</p>
+                            <span class="position">Knowledge Management Division</span>
+                            <div class="contact">
+                                <i class="fas fa-envelope"></i> pol@asti.dost.gov.ph<br>
+                                <i class="fas fa-phone"></i> +63 2 8249 8500 loc. 1514
+                            </div>
+                        </div>
+                        <div class="official-card">
+                            <div class="official-avatar"></div>
+                            <h4>Joanna G. Syjuco</h4>
+                            <p>Chief Science Research Specialist</p>
+                            <span class="position">Computer Software Division</span>
+                            <div class="contact">
+                                <i class="fas fa-envelope"></i> joan@asti.dost.gov.ph<br>
+                                <i class="fas fa-phone"></i> +63 2 8249 8500 loc. 1300
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ASTI WEBSITE PRIVACY POLICY -->
+                <div class="content-block">
+                    <h3>// ASTI WEBSITE PRIVACY POLICY</h3>
+                    <h4>STATEMENT OF POLICY</h4>
+                    <p>DOST-ASTI assures every user of the website that every personal data shall be protected with the agency's best ability. As what is stated in the Data Privacy Act of 2012, the agency will do its duty "to protect the fundamental human right of privacy of communication while ensuring free flow of information to promote innovation and growth".</p>
+                    
+                    <h4>ASTI'S PRIVACY NOTICE - Personal Information</h4>
+                    <p>When you send your concerns or questions to us, the following personal information are being collected:</p>
+                    <ul>
+                        <li>Your full name</li>
+                        <li>Your e-mail address</li>
+                    </ul>
+                    
+                    <h4>Use</h4>
+                    <p>Any information that the Advanced Science and Technology Institute (www.asti.dost.gov.ph) will collect from its users shall be used primarily to give the site's editors and administrators some useful data on the website usage and activities of users.</p>
+                    <p>Should users be required to provide personal information such as name and email address (for subscriptions or correspondence), such information will only be used for the said purpose only. Rest assured that the information collected from users will not be used for marketing nor commercial purposes.</p>
+                    
+                    <h4>Website Analytics</h4>
+                    <p>ASTI uses Google Analytics to track and analyze website traffic. Should a user visit the website, the following information will be gathered and analyzed:</p>
+                    <ul>
+                        <li>Your IP address</li>
+                        <li>Your network location</li>
+                        <li>Your Web browser type</li>
+                        <li>Details of device you used</li>
+                        <li>Search terms you used</li>
+                        <li>Error details when you filled out forms</li>
+                        <li>Number of your clicks on videos</li>
+                        <li>Your scroll depth</li>
+                        <li>Details of your interactions with site-specific widgets</li>
+                        <li>Referring site details (site that redirected to the website)</li>
+                        <li>Date and time you accessed each page</li>
+                        <li>Pages on the site you visited</li>
+                        <li>Duration of the time you spent on each page</li>
+                        <li>Documents you downloaded</li>
+                        <li>Number of your clicks on links leading to external websites</li>
+                    </ul>
+                    
+                    <h4>Protection Measures</h4>
+                    <p>The information that will be gathered will only be accessed by the ASTI website administrator, and shall be archived on a safe server environment. The gathered data would not be accessible to the public, unless the agency will have an intention to publicize some statistics on the website use. Rest assured that the information that will be posted would not identify a specific user.</p>
+                    
+                    <h4>LINKS TO OTHER WEBSITES</h4>
+                    <p>This privacy policy only applies to www.asti.dost.gov.ph. This site contains links to and from websites of other agencies and organizations. Such sites may have a different set of policies from ours. To maintain a secured browsing experience on these sites, we encourage you to try time to read their site policies. Also, for more on this subject, we recommend you to be familiar with the Data Privacy Act of 2012.</p>
+                </div>
+
+                <!-- ASTI PRIVACY NOTICE -->
+                <div class="content-block">
+                    <h3>// ASTI PRIVACY NOTICE</h3>
+                    <p>The DOST-ASTI is committed to fulfilling its mandate of providing information and communications technology and electronics technology solutions through research and development, technology transfer, and science and technology services while implementing safeguards to protect your personal data privacy, in compliance with the Data Privacy Act of 2012.</p>
+                    
+                    <h4>Processing of Personal Data</h4>
+                    <p>The personal data we collect from you, which may include your name, e-mail address, contact numbers, home, and office address, government-issued numbers, etc., may be used for the following purposes, depending on your specific transaction with the DOST-ASTI:</p>
+                    <ul>
+                        <li>Processing of job applications, records management, compensation, and benefits administration, signing of Daily Time Record and other documents, training, performance management, disciplinary action, and separation;</li>
+                        <li>Registration, account creation for systems managed by DOST-ASTI, grant of access to services, analysis of customer feedback, generation of statistical reports;</li>
+                        <li>Screening, selection, and monitoring of service providers and supplier of goods, completion of legal documents and due diligence process, implementation and enforcement of terms and conditions of contracts;</li>
+                        <li>And other actions, programs, and undertakings that are authorized by the DOST-ASTI management.</li>
+                    </ul>
+                    <p>The personal data collected from you may only be divulged to a third party outside the DOST-ASTI system if the process is necessary for the completion of your request, or if the disclosure of which is required through a subpoena issued by the courts or quasi-judicial bodies. Such information may also be used for statistical purposes and reporting of the organization.</p>
+                    
+                    <h4>Data Protection</h4>
+                    <p>We shall implement reasonable and appropriate organizational, physical, and technical security measures for the protection of the personal information that we collected.</p>
+                    <p>Records containing personal data are securely kept in records room/s, office-issued computers, and filing cabinets to prevent loss, destruction, degradation, or unauthorized access. Only authorized personnel are given access to storage and data processing facilities, and all personnel involved in processing personal data shall treat them with strict confidentiality as they are required to sign non-disclosure agreements. In case of a breach, the DOST-ASTI shall notify you in accordance with the circulars released by the National Privacy Commission for personal data breach management.</p>
+                    <p>The personal information collected is retained by the DOST-ASTI in physical and/or electronic storage facilities and later disposed of in a secured manner pursuant to the General Records Disposition Schedule (GRDS) and Agency Records Disposition Schedule (ARDS) approved by the National Archives of the Philippines.</p>
+                    
+                    <h4>Rights of the Data Subjects</h4>
+                    <p>As the Data Subject, you have the right to be informed of the personal information being collected, processed, and stored by the DOST-ASTI. It is also your right to access, object to processing, correct, and order erasure or blocking of the personal information you have provided.</p>
+                    <p>If you have further questions or concerns, you may contact our Data Protection Officer through the following details:</p>
+                    <ul>
+                        <li>Contact no.: (+63 2) 8249 8500, (+63 2) 8426 9755</li>
+                        <li>Email address: privacy@asti.dost.gov.ph</li>
+                    </ul>
+                </div>
+
+                <!-- CART DIRECTORY -->
+                <div class="content-block">
+                    <h3>// COMMITTEE ON ANTI-RED TAPE (CART) DIRECTORY</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>NO.</th>
+                                    <th>NAME</th>
+                                    <th>CART DESIGNATION</th>
+                                    <th>POSITION / TITLE</th>
+                                    <th>OFFICE / DIVISION</th>
+                                    <th>EMAIL ADDRESS</th>
+                                    <th>CONTACT NUMBER</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Franz A. de Leon, Ph.D.</td>
+                                    <td>Chairperson</td>
+                                    <td>Director</td>
+                                    <td>Office of the Director</td>
+                                    <td>franz.deleon@asti.dost.gov.ph</td>
+                                    <td>8249-8500 loc. 1102</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Paul John M. Serrano</td>
+                                    <td>Vice Chairperson</td>
+                                    <td>Chief Science Research Specialist</td>
+                                    <td>Knowledge Management Division</td>
+                                    <td>pol@asti.dost.gov.ph</td>
+                                    <td>8249-8500 loc. 1514</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>May C. Cayaban</td>
+                                    <td>Member</td>
+                                    <td>Chief Administrative Officer</td>
+                                    <td>Finance and Administrative Division</td>
+                                    <td>may@asti.dost.gov.ph</td>
+                                    <td>8249-8500 loc. 1201</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Jaymar L. Jarina</td>
+                                    <td>Member</td>
+                                    <td>Administrative Officer V</td>
+                                    <td>Human Resource Management Section</td>
+                                    <td>jaymar.jarina@asti.dost.gov.ph</td>
+                                    <td>8249-8500 loc. 1107</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Precious Danica M. Felipe</td>
+                                    <td>Member</td>
+                                    <td>Administrative Officer III</td>
+                                    <td>Records Management Section</td>
+                                    <td>preciousdanica.felipe@asti.dost.gov.ph</td>
+                                    <td>8249-8500 loc. 2022</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Girlie D. Fernandez</td>
+                                    <td>Member</td>
+                                    <td>Senior Science Research Specialist</td>
+                                    <td>Management Information System Unit</td>
+                                    <td>girlie@asti.dost.gov.ph</td>
+                                    <td>8249-8500 loc. 1610</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Narcisa Juvilyn C. Castañeda</td>
+                                    <td>Member</td>
+                                    <td>Planning Officer III</td>
+                                    <td>Planning Unit</td>
+                                    <td>juvy@asti.dost.gov.ph</td>
+                                    <td>8249-8500 loc. 1104</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>(To be determined)</td>
+                                    <td>Member</td>
+                                    <td>Internal Quality Audit Team Lead</td>
+                                    <td>(To be determined)</td>
+                                    <td>InternalAuditTeam@asti.dost.gov.ph</td>
+                                    <td>8249-8500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="footer-logo" onerror="this.src='https://via.placeholder.com/50x50/2260a6/ffffff?text=ASTI'">
+                    <p>Advanced Science and Technology Institute<br>Department of Science and Technology<br>Republic of the Philippines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <div class="footer-links">
+                        <a href="transparency.html">Transparency</a>
+                        <a href="research.html">Research</a>
+                        <a href="innovation.html">Innovation</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>CERTIFICATIONS</h4>
+                    <div class="cert-badges">
+                        <span>ISO 9001:2015</span>
+                        <span>DATA PROTECTION</span>
+                        <span>GOV PH</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Advanced Science and Technology Institute (ASTI) | DOST. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-indicator">- LOADING 0% -</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | ASTI - Advanced Science and Technology Institute</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-section { padding: 40px 0; }
+        .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .research-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s; }
+        .research-card:hover { border-color: var(--asti-light-blue); transform: translateY(-5px); }
+        .research-image { height: 150px; overflow: hidden; }
+        .research-image img { width: 100%; height: 100%; object-fit: cover; }
+        .research-content { padding: 25px; }
+        .research-content h3 { color: var(--text-primary); margin-bottom: 10px; font-size: 1.1rem; }
+        .research-content p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px; }
+        .research-link { color: var(--asti-light-blue); text-decoration: none; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s; }
+        .research-link:hover { color: var(--asti-yellow); }
+        .research-icon { font-size: 3.5rem; text-align: center; padding: 40px; color: var(--asti-light-blue); background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)); }
+        @media (max-width: 992px) { .research-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .research-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="system-bar">
+        <div class="container">
+            <div class="system-time" id="philippine-time">
+                <span class="pst-label">PHILIPPINE STANDARD TIME</span>
+                <span class="time-value">Loading...</span>
+            </div>
+            <div class="system-badges">
+                <span class="badge">REPUBLIC OF THE PHILIPPINES</span>
+                <span class="badge">GOVPH</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="header-logo" onerror="this.src='https://via.placeholder.com/80x80/2260a6/ffffff?text=ASTI'">
+                    <div class="title-block">
+                        <span class="republic-text">Republic of the Philippines</span>
+                        <h1 class="dost-title">Department of Science and Technology</h1>
+                        <h2 class="asti-title">Advanced Science and Technology Institute</h2>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <span class="govph-indicator">GOVPH</span>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="transparency.html" class="nav-link">Transparency</a></li>
+                        <li><a href="research.html" class="nav-link active">Research</a></li>
+                        <li><a href="tech-transfer.html" class="nav-link">Tech Transfer</a></li>
+                        <li><a href="innovation.html" class="nav-link">Innovation</a></li>
+                        <li><a href="resources.html" class="nav-link">Resources</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="location-bar">
+        <div class="container">
+            <div class="location-indicator">
+                <span class="location-label">You are here:</span>
+                <span class="location-current">Research</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="page-section">
+                <h2 class="section-title"><span class="accent">RESEARCH</span> HUB</h2>
+                <p style="color: var(--text-muted); margin-bottom: 30px;">Explore our technology domains and research programs</p>
+                
+                <div class="research-grid">
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-satellite"></i>
+                        </div>
+                        <div class="research-content">
+                            <h3>Space Technology</h3>
+                            <p>ASTI leads the Philippines' space technology initiatives, including satellite development, ground station operations, and satellite data applications for disaster management, agriculture, and environmental monitoring.</p>
+                            <p><strong>Key Projects:</strong> DIWATA Microsatellite Program, STAMINA4Space, Satellite Ground Station Operations</p>
+                            <a href="research-space.html" class="research-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="research-content">
+                            <h3>Wireless Technology</h3>
+                            <p>Research and development in wireless communications including 5G technologies, rural broadband connectivity, and IoT communication protocols for connecting underserved communities.</p>
+                            <p><strong>Key Projects:</strong> 5G Testbed, Rural Wireless Broadband, LoRaWAN Deployment</p>
+                            <a href="research-wireless.html" class="research-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="research-content">
+                            <h3>Artificial Intelligence</h3>
+                            <p>Developing AI solutions for various sectors including healthcare, agriculture, disaster response, and public services. Focus on responsible and ethical AI development.</p>
+                            <p><strong>Key Projects:</strong> AI for Agriculture, Natural Language Processing for Filipino, Computer Vision for Disaster Assessment</p>
+                            <a href="research-ai.html" class="research-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="research-content">
+                            <h3>Emerging Technologies</h3>
+                            <p>Research on cutting-edge technologies such as quantum computing applications, blockchain for government services, and advanced materials for electronics.</p>
+                            <p><strong>Key Projects:</strong> Quantum Computing Research, Blockchain for Supply Chain, Advanced Materials Development</p>
+                            <a href="research-emerging.html" class="research-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="research-content">
+                            <h3>Robotics</h3>
+                            <p>Development of robotic systems for agriculture, underwater exploration, and industrial automation to address national challenges in productivity and resource management.</p>
+                            <p><strong>Key Projects:</strong> Agricultural Drones, Underwater ROVs, Autonomous Systems Lab</p>
+                            <a href="research-robotics.html" class="research-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="research-content">
+                            <h3>Research Data</h3>
+                            <p>PEDRO Sensors and PhilSensors networks provide real-time environmental monitoring across the Philippines for weather, air quality, and seismic data collection.</p>
+                            <p><strong>Key Projects:</strong> PhilSensors Network, PEDRO Data Platform, Open Data Initiative</p>
+                            <a href="research-data.html" class="research-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <h3 style="color: var(--asti-yellow); margin-bottom: 20px;">// RESEARCH PUBLICATIONS</h3>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <div class="research-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div class="research-content">
+                                <h3>Latest Publications</h3>
+                                <p>Access our collection of peer-reviewed publications in space technology, wireless communications, AI, and more.</p>
+                                <a href="#" class="research-link">VIEW PUBLICATIONS <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="research-card">
+                            <div class="research-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="research-content">
+                                <h3>Research Labs</h3>
+                                <p>Explore our state-of-the-art research facilities including HPC, RF Testing, Electronics, and Space labs.</p>
+                                <a href="#" class="research-link">TOUR OUR LABS <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="research-card">
+                            <div class="research-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="research-content">
+                                <h3>Collaborate With Us</h3>
+                                <p>Partner with ASTI on research projects, joint ventures, and technology transfer opportunities.</p>
+                                <a href="contact.html" class="research-link">CONTACT US <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="footer-logo" onerror="this.src='https://via.placeholder.com/50x50/2260a6/ffffff?text=ASTI'">
+                    <p>Advanced Science and Technology Institute<br>Department of Science and Technology<br>Republic of the Philippines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <div class="footer-links">
+                        <a href="transparency.html">Transparency</a>
+                        <a href="research.html">Research</a>
+                        <a href="innovation.html">Innovation</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>CERTIFICATIONS</h4>
+                    <div class="cert-badges">
+                        <span>ISO 9001:2015</span>
+                        <span>DATA PROTECTION</span>
+                        <span>GOV PH</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Advanced Science and Technology Institute (ASTI) | DOST. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-indicator">- LOADING 0% -</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

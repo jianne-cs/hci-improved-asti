@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency | ASTI - Advanced Science and Technology Institute</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-section { padding: 40px 0; }
+        .content-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .content-card { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 30px; border-radius: 8px; transition: all 0.3s; }
+        .content-card:hover { border-color: var(--asti-light-blue); transform: translateY(-5px); }
+        .card-icon { font-size: 2.5rem; color: var(--asti-light-blue); margin-bottom: 20px; }
+        .card-content h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text-primary); }
+        .card-content > p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px; }
+        .card-links { list-style: none; }
+        .card-links li { padding: 8px 0; border-bottom: 1px solid var(--border-subtle); }
+        .card-links li a { color: var(--asti-light-blue); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .card-links li a:hover { color: var(--asti-yellow); }
+        @media (max-width: 992px) { .content-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .content-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="system-bar">
+        <div class="container">
+            <div class="system-time" id="philippine-time">
+                <span class="pst-label">PHILIPPINE STANDARD TIME</span>
+                <span class="time-value">Loading...</span>
+            </div>
+            <div class="system-badges">
+                <span class="badge">REPUBLIC OF THE PHILIPPINES</span>
+                <span class="badge">GOVPH</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="header-logo" onerror="this.src='https://via.placeholder.com/80x80/2260a6/ffffff?text=ASTI'">
+                    <div class="title-block">
+                        <span class="republic-text">Republic of the Philippines</span>
+                        <h1 class="dost-title">Department of Science and Technology</h1>
+                        <h2 class="asti-title">Advanced Science and Technology Institute</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <span class="govph-indicator">GOVPH</span>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="transparency.html" class="nav-link active">Transparency</a></li>
+                        <li><a href="research.html" class="nav-link">Research</a></li>
+                        <li><a href="tech-transfer.html" class="nav-link">Tech Transfer</a></li>
+                        <li><a href="innovation.html" class="nav-link">Innovation</a></li>
+                        <li><a href="resources.html" class="nav-link">Resources</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="location-bar">
+        <div class="container">
+            <div class="location-indicator">
+                <span class="location-label">You are here:</span>
+                <span class="location-current">Transparency</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="page-section">
+                <h2 class="section-title"><span class="accent">TRANSPARENCY</span> PORTAL</h2>
+                
+                <div class="content-cards">
+                    <div class="content-card">
+                        <div class="card-icon"><i class="fas fa-building"></i></div>
+                        <div class="card-content">
+                            <h3>About Us</h3>
+                            <p>Mandate, mission, officials, and policies</p>
+                            <ul class="card-links">
+                                <li><a href="transparency-about.html">Our Mandate</a></li>
+                                <li><a href="transparency-about.html">Mission, Vision, Strategic Goals</a></li>
+                                <li><a href="transparency-about.html">Key Officials</a></li>
+                                <li><a href="transparency-about.html">ASTI Website Privacy Policy</a></li>
+                                <li><a href="transparency-about.html">ASTI Privacy Notice</a></li>
+                                <li><a href="transparency-about.html">CART Directory</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="card-content">
+                            <h3>Procurement</h3>
+                            <p>Bids, awards, and annual plans</p>
+                            <ul class="card-links">
+                                <li><a href="transparency-procurement.html">Annual Procurement Plan</a></li>
+                                <li><a href="transparency-procurement.html">Bids and Awards</a></li>
+                                <li><a href="transparency-procurement.html">Procurement Reports</a></li>
+                                <li><a href="transparency-charter.html">Citizen's Charter</a></li>
+                                <li><a href="transparency-gad.html">Gender and Development (GAD) Corner</a></li>
+                                <li><a href="transparency-report.html">Annual Report</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <div class="card-icon"><i class="fas fa-recycle"></i></div>
+                        <div class="card-content">
+                            <h3>Disposal & Careers</h3>
+                            <p>Asset disposal and opportunities</p>
+                            <ul class="card-links">
+                                <li><a href="transparency-disposal.html">Invitation to Bid - Disposal</a></li>
+                                <li><a href="transparency-careers.html">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="footer-logo" onerror="this.src='https://via.placeholder.com/50x50/2260a6/ffffff?text=ASTI'">
+                    <p>Advanced Science and Technology Institute<br>Department of Science and Technology<br>Republic of the Philippines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <div class="footer-links">
+                        <a href="transparency.html">Transparency</a>
+                        <a href="research.html">Research</a>
+                        <a href="innovation.html">Innovation</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>CERTIFICATIONS</h4>
+                    <div class="cert-badges">
+                        <span>ISO 9001:2015</span>
+                        <span>DATA PROTECTION</span>
+                        <span>GOV PH</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Advanced Science and Technology Institute (ASTI) | DOST. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-indicator">- LOADING 0% -</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

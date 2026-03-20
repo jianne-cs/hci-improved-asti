@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ang Surian Documentary | ASTI Resources</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-section { padding: 40px 0; }
+        .video-container { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 30px; margin-bottom: 30px; }
+        .video-player { width: 100%; height: 450px; background: var(--bg-primary); border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 1px solid var(--border-subtle); }
+        .video-placeholder { text-align: center; color: var(--text-muted); }
+        .video-placeholder i { font-size: 4rem; color: var(--asti-light-blue); margin-bottom: 15px; }
+        .video-info h3 { color: var(--text-primary); font-size: 1.3rem; margin-bottom: 10px; }
+        .video-info p { color: var(--text-secondary); line-height: 1.7; }
+        .episode-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .episode-card { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 20px; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+        .episode-card:hover { border-color: var(--asti-light-blue); transform: translateY(-3px); }
+        .episode-number { color: var(--asti-yellow); font-size: 0.8rem; font-family: var(--font-mono); margin-bottom: 8px; }
+        .episode-card h4 { color: var(--text-primary); font-size: 1rem; margin-bottom: 8px; }
+        .episode-card p { color: var(--text-muted); font-size: 0.85rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--asti-light-blue); text-decoration: none; margin-bottom: 20px; }
+        .back-link:hover { color: var(--asti-yellow); }
+        @media (max-width: 992px) { .episode-list { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .episode-list { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="system-bar">
+        <div class="container">
+            <div class="system-time" id="philippine-time">
+                <span class="pst-label">PHILIPPINE STANDARD TIME</span>
+                <span class="time-value">Loading...</span>
+            </div>
+            <div class="system-badges">
+                <span class="badge">REPUBLIC OF THE PHILIPPINES</span>
+                <span class="badge">GOVPH</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="header-logo" onerror="this.src='https://via.placeholder.com/80x80/2260a6/ffffff?text=ASTI'">
+                    <div class="title-block">
+                        <span class="republic-text">Republic of the Philippines</span>
+                        <h1 class="dost-title">Department of Science and Technology</h1>
+                        <h2 class="asti-title">Advanced Science and Technology Institute</h2>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <span class="govph-indicator">GOVPH</span>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="transparency.html" class="nav-link">Transparency</a></li>
+                        <li><a href="research.html" class="nav-link">Research</a></li>
+                        <li><a href="tech-transfer.html" class="nav-link">Tech Transfer</a></li>
+                        <li><a href="innovation.html" class="nav-link">Innovation</a></li>
+                        <li><a href="resources.html" class="nav-link active">Resources</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="location-bar">
+        <div class="container">
+            <div class="location-indicator">
+                <span class="location-label">You are here:</span>
+                <span class="location-current">Resources > Ang Surian</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <a href="resources.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Resources</a>
+            
+            <section class="page-section">
+                <h2 class="section-title"><span class="accent">ANG SURIAN</span> DOCUMENTARY</h2>
+                
+                <div class="video-container">
+                    <div class="video-player">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Click to play documentary</p>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>The Science Behind ASTI</h3>
+                        <p>Discover how ASTI's research and innovations are shaping the future of the Philippines. This documentary showcases our commitment to advancing science and technology for national development.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--asti-yellow); margin-bottom: 20px;">EPISODES</h3>
+                <div class="episode-list">
+                    <div class="episode-card">
+                        <div class="episode-number">EPISODE 01</div>
+                        <h4>Space Technology</h4>
+                        <p>Explore the Philippines' journey into space science.</p>
+                    </div>
+                    <div class="episode-card">
+                        <div class="episode-number">EPISODE 02</div>
+                        <h4>AI Innovations</h4>
+                        <p>How AI is transforming various sectors in the country.</p>
+                    </div>
+                    <div class="episode-card">
+                        <div class="episode-number">EPISODE 03</div>
+                        <h4>Connected Philippines</h4>
+                        <p>Wireless technology bridging the digital divide.</p>
+                    </div>
+                    <div class="episode-card">
+                        <div class="episode-number">EPISODE 04</div>
+                        <h4>Environmental Monitoring</h4>
+                        <p>Sensors and data for disaster preparedness.</p>
+                    </div>
+                    <div class="episode-card">
+                        <div class="episode-number">EPISODE 05</div>
+                        <h4>Future Innovators</h4>
+                        <p>Nurturing the next generation of scientists.</p>
+                    </div>
+                    <div class="episode-card">
+                        <div class="episode-number">EPISODE 06</div>
+                        <h4>Research Excellence</h4>
+                        <p>ASTI's impact on Philippine research landscape.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="footer-logo" onerror="this.src='https://via.placeholder.com/50x50/2260a6/ffffff?text=ASTI'">
+                    <p>Advanced Science and Technology Institute<br>Department of Science and Technology<br>Republic of the Philippines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <div class="footer-links">
+                        <a href="transparency.html">Transparency</a>
+                        <a href="research.html">Research</a>
+                        <a href="innovation.html">Innovation</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>CERTIFICATIONS</h4>
+                    <div class="cert-badges">
+                        <span>ISO 9001:2015</span>
+                        <span>DATA PROTECTION</span>
+                        <span>GOV PH</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Advanced Science and Technology Institute (ASTI) | DOST. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-indicator">- LOADING 0% -</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

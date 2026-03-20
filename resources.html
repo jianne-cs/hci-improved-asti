@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | ASTI - Advanced Science and Technology Institute</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-section { padding: 40px 0; }
+        .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .resource-card { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 30px; border-radius: 8px; transition: all 0.3s; }
+        .resource-card:hover { border-color: var(--asti-light-blue); transform: translateY(-5px); }
+        .resource-card h3 { color: var(--asti-yellow); font-size: 1.1rem; margin-bottom: 15px; letter-spacing: 1px; }
+        .resource-list { list-style: none; }
+        .resource-list li { padding: 10px 0; border-bottom: 1px solid var(--border-subtle); }
+        .resource-list li:last-child { border-bottom: none; }
+        .resource-list li a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; display: flex; align-items: center; gap: 10px; }
+        .resource-list li a:hover { color: var(--asti-light-blue); }
+        .resource-list li a::before { content: '📄'; font-size: 0.8rem; }
+        .event-card { background: var(--bg-secondary); padding: 20px; border-radius: 6px; margin-bottom: 15px; border: 1px solid var(--border-subtle); }
+        .event-card h4 { color: var(--text-primary); font-size: 1rem; margin-bottom: 8px; }
+        .event-card p { color: var(--text-muted); font-size: 0.85rem; }
+        .event-date { color: var(--asti-yellow); font-size: 0.75rem; font-family: var(--font-mono); }
+        @media (max-width: 992px) { .resources-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .resources-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="system-bar">
+        <div class="container">
+            <div class="system-time" id="philippine-time">
+                <span class="pst-label">PHILIPPINE STANDARD TIME</span>
+                <span class="time-value">Loading...</span>
+            </div>
+            <div class="system-badges">
+                <span class="badge">REPUBLIC OF THE PHILIPPINES</span>
+                <span class="badge">GOVPH</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="header-logo" onerror="this.src='https://via.placeholder.com/80x80/2260a6/ffffff?text=ASTI'">
+                    <div class="title-block">
+                        <span class="republic-text">Republic of the Philippines</span>
+                        <h1 class="dost-title">Department of Science and Technology</h1>
+                        <h2 class="asti-title">Advanced Science and Technology Institute</h2>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <span class="govph-indicator">GOVPH</span>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="transparency.html" class="nav-link">Transparency</a></li>
+                        <li><a href="research.html" class="nav-link">Research</a></li>
+                        <li><a href="tech-transfer.html" class="nav-link">Tech Transfer</a></li>
+                        <li><a href="innovation.html" class="nav-link">Innovation</a></li>
+                        <li><a href="resources.html" class="nav-link active">Resources</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="location-bar">
+        <div class="container">
+            <div class="location-indicator">
+                <span class="location-label">You are here:</span>
+                <span class="location-current">Resources</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="page-section">
+                <h2 class="section-title"><span class="accent">RESOURCES</span> & MEDIA</h2>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>// EVENTS</h3>
+                        <div class="event-card">
+                            <span class="event-date">May 15-17, 2025</span>
+                            <h4>ASTICON 2025</h4>
+                            <p>Annual Science and Technology Conference</p>
+                        </div>
+                        <div class="event-card">
+                            <span class="event-date">May 10-12, 2024</span>
+                            <h4>ASTICON 2024</h4>
+                            <p>Annual Science and Technology Conference</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3>// MEDIA RELEASE</h3>
+                        <ul class="resource-list">
+                            <li><a href="#">ASTI launches new satellite ground station</a></li>
+                            <li><a href="#">DOST-ASTI partners with international research network</a></li>
+                            <li><a href="#">AI for disaster preparedness program announced</a></li>
+                            <li><a href="#">New wireless technology breakthrough</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3>// DOCUMENTARIES</h3>
+                        <ul class="resource-list">
+                            <li><a href="resources-ang-surian.html">Ang Surian Documentary Series</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resources-grid" style="margin-top: 25px;">
+                    <div class="resource-card">
+                        <h3>// NEWS ARTICLES</h3>
+                        <ul class="resource-list">
+                            <li><a href="#">ASTI researcher wins international award</a></li>
+                            <li><a href="#">New wireless technology tested in rural areas</a></li>
+                            <li><a href="#">PEDRO Center releases annual data report</a></li>
+                            <li><a href="#">Space technology milestones achieved</a></li>
+                            <li><a href="#">AI innovations showcased at summit</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3>// PUBLICATIONS</h3>
+                        <ul class="resource-list">
+                            <li><a href="#">Annual Report 2024</a></li>
+                            <li><a href="#">Research Catalog 2024</a></li>
+                            <li><a href="#">Technology Compendium</a></li>
+                            <li><a href="#">Technical Guidelines</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3>// MULTIMEDIA</h3>
+                        <ul class="resource-list">
+                            <li><a href="#">Photo Gallery</a></li>
+                            <li><a href="#">Video Archives</a></li>
+                            <li><a href="#">Infographics</a></li>
+                            <li><a href="#">Presentations</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="footer-logo" onerror="this.src='https://via.placeholder.com/50x50/2260a6/ffffff?text=ASTI'">
+                    <p>Advanced Science and Technology Institute<br>Department of Science and Technology<br>Republic of the Philippines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <div class="footer-links">
+                        <a href="transparency.html">Transparency</a>
+                        <a href="research.html">Research</a>
+                        <a href="innovation.html">Innovation</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>CERTIFICATIONS</h4>
+                    <div class="cert-badges">
+                        <span>ISO 9001:2015</span>
+                        <span>DATA PROTECTION</span>
+                        <span>GOV PH</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Advanced Science and Technology Institute (ASTI) | DOST. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-indicator">- LOADING 0% -</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

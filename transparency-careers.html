@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | ASTI Transparency</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-section { padding: 40px 0; }
+        .info-block { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 30px; border-radius: 8px; margin-bottom: 25px; }
+        .info-block h3 { color: var(--asti-yellow); margin-bottom: 15px; font-size: 1.2rem; }
+        .info-block p { color: var(--text-secondary); line-height: 1.8; }
+        .career-list { list-style: none; margin-top: 15px; }
+        .career-item { background: var(--bg-secondary); border: 1px solid var(--border-subtle); padding: 20px; border-radius: 8px; margin-bottom: 15px; transition: all 0.3s; }
+        .career-item:hover { border-color: var(--asti-light-blue); }
+        .career-item h4 { color: var(--text-primary); margin-bottom: 8px; }
+        .career-item p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px; }
+        .career-meta { display: flex; gap: 20px; font-size: 0.8rem; color: var(--asti-light-blue); }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--asti-light-blue); text-decoration: none; margin-bottom: 20px; }
+        .back-link:hover { color: var(--asti-yellow); }
+    </style>
+</head>
+<body>
+    <div class="system-bar">
+        <div class="container">
+            <div class="system-time" id="philippine-time">
+                <span class="pst-label">PHILIPPINE STANDARD TIME</span>
+                <span class="time-value">Loading...</span>
+            </div>
+            <div class="system-badges">
+                <span class="badge">REPUBLIC OF THE PHILIPPINES</span>
+                <span class="badge">GOVPH</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="header-logo" onerror="this.src='https://via.placeholder.com/80x80/2260a6/ffffff?text=ASTI'">
+                    <div class="title-block">
+                        <span class="republic-text">Republic of the Philippines</span>
+                        <h1 class="dost-title">Department of Science and Technology</h1>
+                        <h2 class="asti-title">Advanced Science and Technology Institute</h2>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <span class="govph-indicator">GOVPH</span>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="transparency.html" class="nav-link active">Transparency</a></li>
+                        <li><a href="research.html" class="nav-link">Research</a></li>
+                        <li><a href="tech-transfer.html" class="nav-link">Tech Transfer</a></li>
+                        <li><a href="innovation.html" class="nav-link">Innovation</a></li>
+                        <li><a href="resources.html" class="nav-link">Resources</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="location-bar">
+        <div class="container">
+            <div class="location-indicator">
+                <span class="location-label">You are here:</span>
+                <span class="location-current">Transparency > Careers</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <a href="transparency.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Transparency</a>
+            
+            <section class="page-section">
+                <h2 class="section-title"><span class="accent">CAREER</span> OPPORTUNITIES</h2>
+                
+                <div class="info-block">
+                    <h3>// JOIN OUR TEAM</h3>
+                    <p>ASTI is looking for talented and motivated individuals to join our team of researchers, engineers, and professionals. We offer competitive compensation and benefits, opportunities for professional development, and a dynamic work environment.</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>// CURRENT OPENINGS</h3>
+                    <ul class="career-list">
+                        <li class="career-item">
+                            <h4>Research Scientist - Artificial Intelligence</h4>
+                            <p>Lead AI research projects and develop machine learning solutions for national applications.</p>
+                            <div class="career-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Quezon City</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
+                        </li>
+                        <li class="career-item">
+                            <h4>Electronics Engineer</h4>
+                            <p>Design and develop electronic systems for various research applications.</p>
+                            <div class="career-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Quezon City</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
+                        </li>
+                        <li class="career-item">
+                            <h4>Software Developer</h4>
+                            <p>Develop software applications and systems for research and operations.</p>
+                            <div class="career-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Quezon City</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h3>// HOW TO APPLY</h3>
+                    <p>Submit your application letter, resume, and other requirements to the HR Unit of ASTI. For inquiries, please contact us through our contact page.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="footer-logo" onerror="this.src='https://via.placeholder.com/50x50/2260a6/ffffff?text=ASTI'">
+                    <p>Advanced Science and Technology Institute<br>Department of Science and Technology<br>Republic of the Philippines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <div class="footer-links">
+                        <a href="transparency.html">Transparency</a>
+                        <a href="research.html">Research</a>
+                        <a href="innovation.html">Innovation</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>CERTIFICATIONS</h4>
+                    <div class="cert-badges">
+                        <span>ISO 9001:2015</span>
+                        <span>DATA PROTECTION</span>
+                        <span>GOV PH</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Advanced Science and Technology Institute (ASTI) | DOST. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-indicator">- LOADING 0% -</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

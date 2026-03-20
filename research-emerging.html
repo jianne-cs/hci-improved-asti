@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerging Technologies | ASTI Research</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-section { padding: 40px 0; }
+        .info-block { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 30px; border-radius: 8px; margin-bottom: 25px; }
+        .info-block h3 { color: var(--asti-yellow); margin-bottom: 15px; font-size: 1.2rem; }
+        .info-block p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 15px; }
+        .info-list { list-style: none; margin-top: 15px; }
+        .info-list li { padding: 10px 0; border-bottom: 1px solid var(--border-subtle); color: var(--text-secondary); }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--asti-light-blue); text-decoration: none; margin-bottom: 20px; }
+        .back-link:hover { color: var(--asti-yellow); }
+    </style>
+</head>
+<body>
+    <div class="system-bar">
+        <div class="container">
+            <div class="system-time" id="philippine-time">
+                <span class="pst-label">PHILIPPINE STANDARD TIME</span>
+                <span class="time-value">Loading...</span>
+            </div>
+            <div class="system-badges">
+                <span class="badge">REPUBLIC OF THE PHILIPPINES</span>
+                <span class="badge">GOVPH</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="header-logo" onerror="this.src='https://via.placeholder.com/80x80/2260a6/ffffff?text=ASTI'">
+                    <div class="title-block">
+                        <span class="republic-text">Republic of the Philippines</span>
+                        <h1 class="dost-title">Department of Science and Technology</h1>
+                        <h2 class="asti-title">Advanced Science and Technology Institute</h2>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <span class="govph-indicator">GOVPH</span>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="transparency.html" class="nav-link">Transparency</a></li>
+                        <li><a href="research.html" class="nav-link active">Research</a></li>
+                        <li><a href="tech-transfer.html" class="nav-link">Tech Transfer</a></li>
+                        <li><a href="innovation.html" class="nav-link">Innovation</a></li>
+                        <li><a href="resources.html" class="nav-link">Resources</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="location-bar">
+        <div class="container">
+            <div class="location-indicator">
+                <span class="location-label">You are here:</span>
+                <span class="location-current">Research > Emerging Technologies</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <a href="research.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Research</a>
+            
+            <section class="page-section">
+                <h2 class="section-title"><span class="accent">EMERGING</span> TECHNOLOGIES</h2>
+                
+                <div class="info-block">
+                    <h3>// OVERVIEW</h3>
+                    <p>ASTI's Emerging Technologies research explores cutting-edge technologies with high potential for future applications. We monitor global technology trends, evaluate their relevance to Philippine contexts, and develop capabilities to harness these technologies for national development.</p>
+                    <p>Our work ensures the Philippines remains competitive in the global technology landscape while addressing unique local challenges and opportunities.</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>// KEY RESEARCH AREAS</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-atom"></i> <strong>Quantum Computing</strong> - Research on quantum computing applications, post-quantum cryptography, and quantum-ready infrastructure planning</li>
+                        <li><i class="fas fa-link"></i> <strong>Blockchain and Distributed Ledger Technology</strong> - Applications for secure government transactions, supply chain verification, and digital identity</li>
+                        <li><i class="fas fa-microchip"></i> <strong>Advanced Materials</strong> - Research on electronic materials, sensors, and nanomaterials for various applications</li>
+                        <li><i class="fas fa-network-wired"></i> <strong>Internet of Things (IoT)</strong> - Smart systems for agriculture, cities, and infrastructure management</li>
+                        <li><i class="fas fa-vr-cardboard"></i> <strong>AR/VR/XR</strong> - Immersive technologies for education, training, and visualization</li>
+                        <li><i class="fas fa-digital-tachograph"></i> <strong>Digital Twin Technology</strong> - Virtual replicas of physical systems for simulation and optimization</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h3>// CURRENT INITIATIVES</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-lock"></i> <strong>Post-Quantum Cryptography Research</strong> - Preparing government systems for quantum computing threats</li>
+                        <li><i class="fas fa-truck"></i> <strong>Blockchain for Supply Chain</strong> - Pilot projects for agricultural product tracing and pharmaceutical supply chain</li>
+                        <li><i class="fas fa-city"></i> <strong>Smart Cities Testbed</strong> - IoT deployments in selected cities for urban management solutions</li>
+                        <li><i class="fas fa-graduation-cap"></i> <strong>XR Training Platform</strong> - Virtual reality for skills training in various sectors</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h3>// FUTURE ROADMAPS</h3>
+                    <p>We develop technology roadmaps to guide long-term research and development:</p>
+                    <ul class="info-list">
+                        <li><a href="#"><i class="fas fa-file-pdf"></i> Quantum Computing Readiness Framework</a></li>
+                        <li><a href="#"><i class="fas fa-file-pdf"></i> Blockchain Implementation Guidelines for Government</a></li>
+                        <li><a href="#"><i class="fas fa-file-pdf"></i> IoT Philippines Strategy 2030</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="assets/astilogo.png" alt="ASTI" class="footer-logo" onerror="this.src='https://via.placeholder.com/50x50/2260a6/ffffff?text=ASTI'">
+                    <p>Advanced Science and Technology Institute<br>Department of Science and Technology<br>Republic of the Philippines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <div class="footer-links">
+                        <a href="transparency.html">Transparency</a>
+                        <a href="research.html">Research</a>
+                        <a href="innovation.html">Innovation</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>CERTIFICATIONS</h4>
+                    <div class="cert-badges">
+                        <span>ISO 9001:2015</span>
+                        <span>DATA PROTECTION</span>
+                        <span>GOV PH</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Advanced Science and Technology Institute (ASTI) | DOST. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-indicator">- LOADING 0% -</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
