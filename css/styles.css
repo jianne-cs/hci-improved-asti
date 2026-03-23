@@ -184,6 +184,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     letter-spacing: 1px;
     background: rgba(43, 163, 213, 0.1);
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.badge:hover {
+    background: rgba(43, 163, 213, 0.2);
+    color: var(--text-primary);
 }
 
 /* ========== HEADER ========== */
